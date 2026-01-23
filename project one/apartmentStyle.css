@@ -1,0 +1,157 @@
+:root {
+  --main-color: #ff0051;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bellota Text", sans-serif;
+}
+
+.images-container {
+  margin: 50px auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.images-container div {
+  background-size: cover;
+  border-radius: 10px;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.images-container div:hover {
+  scale: 1.01;
+}
+.hero-img {
+  width: 100%;
+  height: 500px;
+  background-image: url("./c2600188-6e71-4f83-8ed6-056c3e9089dd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sec-imgs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sec-imgs div img {
+  width: 33%;
+}
+#img-2 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./c2600188-6e71-4f83-8ed6-056c3e9089dd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#img-3 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./abc585a5-5b9f-4300-b538-394cff9c3a6b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#img-4 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./houses-8618837_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    padding:0 20% ;
+    align-items: flex-start;
+    gap: 50px;
+}
+.apartment-info {
+    width: 80%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
+}
+.title {
+    color: #ff0051;
+  font-size: 28px;
+  font-weight: 900;
+}
+.title-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.badge {
+  background-color: #ffd4e1;
+  color: #ff0051;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+.address {
+  font-size: 18px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apartment-owner-card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(212, 212, 212);
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.owner-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&q=80");
+    background-size: cover;
+}
+
+.apartment-owner-card button{
+    background-color: #d4ffd4;
+    color: #007a00;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.aminities{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.amin-obj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: bold;
+}
+.amin-obj i{
+    color: rgb(173, 173, 173);
+}
+
+.price{
+    background-color: #ff0051;
+    height: 150px;
+    width: 40%;
+}
