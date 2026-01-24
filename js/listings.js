@@ -15,7 +15,7 @@ var parent = document.getElementById('parent');
 alldata.forEach(apt => {
     var card = document.createElement('div');
     card.classList.add("apartment-card");
-card.onclick = function() {
+   card.onclick = function() {
         window.location.href = `listing.html?id=${apt.id}`;
     };
     var imageSection = document.createElement('div');

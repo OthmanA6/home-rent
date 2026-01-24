@@ -55,6 +55,7 @@ function toAswan() {
      }
  }
   console.log(searchLocation);
+  window.location.href = `listing.html?id=${searchLocation[0].city}`;
   
 }
 function toAlexandria() {
@@ -65,6 +66,7 @@ function toAlexandria() {
      }
  }
   console.log(searchLocation);
+  window.location.href = `listing.html?id=${searchLocation[0].city}`;
 
 }
 function toCairo() {
@@ -75,6 +77,7 @@ function toCairo() {
      }
  }
   console.log(searchLocation);
+  window.location.href = `listing.html?id=${searchLocation[0].city}`;
 
 }
 function toDahab() {
@@ -85,6 +88,7 @@ function toDahab() {
      }
  }
   console.log(searchLocation);
+  window.location.href = `listing.html?id=${searchLocation[0].city}`;
   
 }
 function toElGouna() {
@@ -95,5 +99,10 @@ function toElGouna() {
      }
  }
   console.log(searchLocation);
+ window.location.href = `listing.html?id=${searchLocation[0].city}`;
   
 }
+
+
+        
+  
