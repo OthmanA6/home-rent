@@ -1,15 +1,19 @@
 :root {
   --main-color: #ff0051;
 }
+body {
+  background-color: #fff2d8;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Bellota Text", sans-serif;
+  
 }
 .nav{
-  background-color: #ff0051;
+  background-color: #ff7a00;
   height: 70px;
 }
 .images-container {
@@ -88,7 +92,7 @@
   gap: 10px;
 }
 .title {
-  color: #ff0051;
+  color: #ff7a00;
   font-size: 28px;
   font-weight: 900;
 }
@@ -102,8 +106,8 @@
   align-items: center;
 }
 .badge {
-  background-color: #ffd4e1;
-  color: #ff0051;
+  background-color: #fff2d8;
+  color: #ff7a00;
   padding: 10px;
   border-radius: 10px;
   width: fit-content;
@@ -196,14 +200,14 @@ hr{
   display: flex;
   flex-direction: column;
   background-color: white;
-  border: 1px solid #ff0051;
-  box-shadow:  7px 10px 0px 0px #ff005131;
+  border: 1px solid #191919;
+  /* box-shadow:  7px 10px 0px 0px #ff005131; */
   gap: 20px;
   /* transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s; */
   width: 40%;
 }
 .left-card div h1{
-  color: #ff0051;
+  color: #ff7a00;
   font-weight: bold;
   font-size: 38px;
 }
@@ -215,6 +219,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
 }
 .lefr-card-content{
   display: flex;
@@ -224,7 +229,7 @@ hr{
 
 
 .left-card button{
-  background-color: #ff0051;
+  background-color: #ff7a00;
   border-radius: 20px;
   padding: 10px;
   border: none;
@@ -234,7 +239,7 @@ hr{
 
 }
 .left-card button:hover{
-  background-color: #ff3d7b;
+  background-color: #ff891a;
       box-shadow:  5px 5px 10px 0px #ff005131;
       cursor: pointer;
 }
