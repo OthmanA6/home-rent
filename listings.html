@@ -13,6 +13,58 @@
             padding: 0;
         }
 
+        .nav {
+            background-color: #ff7a00;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #302000;
+            transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+            color: #805500;
+
+        }
+
+        .reservations {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #ffc978;
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            color: #fa7900;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+        }
+
+        .reservations p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #be2c2c;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+
+        .reservations:hover {
+            cursor: pointer;
+            color: #b85900;
+            background-color: #ffd699;
+        }
+
         #parent {
             max-width: 900px;
             margin: 20px auto;
@@ -114,62 +166,64 @@
 </head>
 
 <body>
-
+    <div class="nav" id="nav">
+        <div class="logo" onclick="window.location.href='listings.html'">Homelist</div>
+    </div>
     <div id="parent"></div>
 
     <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-col brand">
-                    <div class="logo">
-                        <span>Homelist</span>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor amet, consectetur sell adipis elit
-                        phase nibh ellentes
-                    </p>
-
-                    <input type="email" placeholder="Enter your email">
-                    <button>Subscribe</button>
-
-                    <div class="social">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-x-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
+        <div class="footer-container">
+            <div class="footer-col brand">
+                <div class="logo">
+                    <span>Homelist</span>
                 </div>
+                <p>
+                    Lorem ipsum dolor amet, consectetur sell adipis elit
+                    phase nibh ellentes
+                </p>
 
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Home rent</li>
-                        <li>Car rental</li>
-                        <li>Flight finder</li>
-                        <li>Restaurant reservations</li>
-                    </ul>
-                </div>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
 
-                <div class="footer-col">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li>About Us</li>
-                        <li>Our Team</li>
-                        <li>Recent News</li>
-                        <li>Terms & Privacy</li>
-                    </ul>
+                <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
                 </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p><i class="fa-solid fa-envelope"></i> Osmanabdelrazik@gmail.com</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Aswan,Egypt</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Hosts</h4>
-                    <p><i class="fa-solid fa-envelope"></i> List your property</p>
-                </div>
-
             </div>
-        </footer>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li>Home rent</li>
+                    <li>Car rental</li>
+                    <li>Flight finder</li>
+                    <li>Restaurant reservations</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Our Team</li>
+                    <li>Recent News</li>
+                    <li>Terms & Privacy</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-envelope"></i> Osmanabdelrazik@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Aswan,Egypt</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hosts</h4>
+                <p><i class="fa-solid fa-envelope"></i> List your property</p>
+            </div>
+
+        </div>
+    </footer>
     <script src="js/listings.js"></script>
 </body>
 

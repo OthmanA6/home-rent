@@ -15,6 +15,49 @@ body {
 .nav{
   background-color: #ff7a00;
   height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo{
+  font-size: 36px;
+  font-weight: bold;
+  color: #302000;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+.logo:hover{
+  cursor: pointer;
+    color: #805500;
+
+}
+.reservations{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffc978;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  color: #fa7900;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+.reservations p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #be2c2c;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.reservations:hover{
+  cursor: pointer;
+  color: #b85900;
+  background-color: #ffd699;
 }
 .images-container {
   margin: 50px auto;
@@ -106,7 +149,7 @@ body {
   align-items: center;
 }
 .badge {
-  background-color: #fff2d8;
+  background-color: #ffe2a7;
   color: #ff7a00;
   padding: 10px;
   border-radius: 10px;
@@ -140,7 +183,7 @@ body {
 }
 hr{
   margin-block: 10px;
-  border: 1px solid rgb(238, 238, 238);
+  border: 1px solid #ffb82a79;
 }
 
 .apartment-owner-card {
@@ -189,7 +232,7 @@ hr{
   font-weight: bold;
 }
 .amin-obj i {
-  color: rgb(173, 173, 173);
+  color:#8d5e01;
 }
 
 .left-card {
@@ -199,8 +242,8 @@ hr{
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid #191919;
+  background-color: #ffe7b6;
+  border: 1px solid #ff7a00;
   /* box-shadow:  7px 10px 0px 0px #ff005131; */
   gap: 20px;
   /* transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s; */
@@ -219,7 +262,6 @@ hr{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
 }
 .lefr-card-content{
   display: flex;
@@ -242,9 +284,4 @@ hr{
   background-color: #ff891a;
       box-shadow:  5px 5px 10px 0px #ff005131;
       cursor: pointer;
-}
-
-.footer{
-  background-color: #ff0051;
-  height: 500px;
 }
