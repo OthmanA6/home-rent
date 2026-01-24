@@ -49,7 +49,7 @@ body {
 
 .sign-in-form button {
   height: 50px;
-  background-color: #ff0051;
+  background-color: #ff7a00;
   border-radius: 10px;
   border: none;
   margin-top: 20px;
@@ -60,18 +60,18 @@ body {
   transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .sign-in-form button:hover {
-  background-color: #ff4c85;
+  background-color: #ff7a00;
       box-shadow: #ff005113 5px 5px;
   cursor: pointer;
 }
 .sign-in-form input:focus {
   box-shadow: #ff005113 5px 5px;
-  border: #ff0051 0.5px solid;
+  border: #ff7a00 0.5px solid;
 }
 .sign-up-suggest {
   text-align: center;
   margin-top: 20px;
 }
 .sign-up-suggest a {
-  color: #ff0051;
+  color: #ff7a00;
 }

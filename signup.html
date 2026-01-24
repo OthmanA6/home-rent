@@ -26,20 +26,20 @@
         </div>
         <form class="sign-up-form">
             <label for="firstName">First Name</label>
-            <input type="text" placeholder="Enter Your First Name" minlength="2" maxlength="10">
+            <input type="text" placeholder="Enter Your First Name" minlength="2" maxlength="10" required id="firstName">
             <label for="lastName">Last Name</label>
-            <input type="text" placeholder="Enter Your Last Name" minlength="2" maxlength="10">
+            <input type="text" placeholder="Enter Your Last Name" minlength="2" maxlength="10" required id="lastName">
             <label for="E-mail">E-mail</label>
-            <input type="email" placeholder="Enter Your E-mail">
+            <input type="email" placeholder="Enter Your E-mail" required id="email">
             <label for="password">Password</label>
-            <input type="password" placeholder="Enter Your Password">
-            <button type="submit">Sign Up</button>
+            <input type="password" placeholder="Enter Your Password" required id="password">
+            <button onclick="saveUser()" type="button">Sign Up</button>
             <div class="sign-in-suggest">Already have an account? <a href="signin.html">Sign in</a></div>
         </form>
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./js/signUp.js"></script>
 </body>
 
 </html>

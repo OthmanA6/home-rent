@@ -207,7 +207,7 @@ function setContent() {
       alert("Reserved Before !");
     }
   });
-  leftCard.append(priceRate, hr4, aminities, hr5, rules, ReserveButton);
+  leftCard.append(priceRate, hr4, amenityHeader,aminities, hr5, rules, ReserveButton);
 }
 
 const amenityIcons = {
