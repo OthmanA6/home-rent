@@ -14,10 +14,13 @@
         href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="apartmentStyle.css">
+    <link rel="stylesheet" href="footerStyle.css">
 </head>
 
 <body>
-    <div class="nav"></div>
+    <div class="nav" id="nav">
+        <div class="logo" onclick="window.location.href='listings.html'">Homelist</div>
+    </div>
     <div class="images-container" id="images-container">
         <div class="sec-imgs" id="sec-imgs"></div>
     </div>
@@ -72,7 +75,59 @@
         </div>
     </div>
     </div>
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col brand">
+                <div class="logo">
+                    <span>Homelist</span>
+                </div>
+                <p>
+                    Lorem ipsum dolor amet, consectetur sell adipis elit
+                    phase nibh ellentes
+                </p>
+
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+
+                <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li>Home rent</li>
+                    <li>Car rental</li>
+                    <li>Flight finder</li>
+                    <li>Restaurant reservations</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Our Team</li>
+                    <li>Recent News</li>
+                    <li>Terms & Privacy</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-envelope"></i> Osmanabdelrazik@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Aswan,Egypt</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hosts</h4>
+                <p><i class="fa-solid fa-envelope"></i> List your property</p>
+            </div>
+
+        </div>
+    </footer>
     <script src="./js/apartment.js"></script>
 </body>
 

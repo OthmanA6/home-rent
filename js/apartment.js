@@ -45,6 +45,19 @@ function setImages() {
 }
 
 function setContent() {
+  reservedApartments =
+    JSON.parse(localStorage.getItem("reservedApartment")) || [];
+  var nav = document.getElementById("nav");
+  var reservations = document.createElement("reservations");
+  reservations.addEventListener("click", () => {
+    window.location.href = "reservationPage.html";
+  });
+  reservations.setAttribute("class", "reservations");
+  if (reservedApartments.length == 0)
+    reservations.innerHTML = `<i class="fa-solid fa-hotel"></i><p>0</p>`;
+  else
+    reservations.innerHTML = `<i class="fa-solid fa-hotel"></i><p>${reservedApartments.length}</p>`;
+  nav.append(reservations);
   var contentContainer = document.getElementById("content-container");
   var apartmentInfo = document.getElementById("apartment-info");
   var typeAndCity = document.getElementById("type-city");
@@ -149,7 +162,7 @@ function setContent() {
   var rateBadge = document.createElement("div");
   rateBadge.setAttribute("class", "rate badge");
   rateBadge.innerHTML = `<span><i class="fa-solid fa-star"></i></span><h2>${apartment.rating}</h2>`;
-  contentContainer.appendChild(apartmentInfo, leftCard);
+  contentContainer.appendChild(leftCard, apartmentInfo);
 
   priceRate.append(pricePerNight, rateBadge, hr4);
 
@@ -180,6 +193,20 @@ function setContent() {
   }
   var ReserveButton = document.createElement("button");
   ReserveButton.innerHTML = "Reserve";
+  var reservedApartments =
+    JSON.parse(localStorage.getItem("reservedApartment")) || [];
+  ReserveButton.addEventListener("click", () => {
+    if (!reservedApartments.includes(apartment.apartment_id)) {
+      reservedApartments.push(apartment.apartment_id);
+      alert("Reserved Sucsessfully !")
+      localStorage.setItem(
+        "reservedApartment",
+        JSON.stringify(reservedApartments),
+      );
+    } else {
+      alert("Reserved Before !");
+    }
+  });
   leftCard.append(priceRate, hr4, aminities, hr5, rules, ReserveButton);
 }
 
