@@ -5,14 +5,24 @@ xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     alldata = JSON.parse(xhr.responseText);
     console.log("Data loaded successfully");
-    renderCards(alldata);
+    renderCards();
   }
 };
 xhr.send();
 
-function renderCards(data) {
+// var apartment;
+// function getApartmentData() {
+//   alldata.forEach((apt) => {
+//     if (apt.apartment_id == localStorage.getItem("searchcity")) {
+//       apartment = apt;
+//     }
+//   });
+//   renderCards();
+// }
+
+function renderCards() {
     var parent = document.getElementById('parent');
-    alldata.forEach(apt => {
+    JSON.parse(localStorage.getItem("searchcity")).forEach(apt => {
         var card = document.createElement('div');
         card.classList.add("apartment-card");
 

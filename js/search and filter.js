@@ -29,79 +29,39 @@ function Results() {
       continue;
     }
 
-    if (Sdate && item.available_from > Sdate) {
-      continue;
-    }
-
-    if (Edate && item.available_to < Edate) {
-      continue;
-    }
+   if (Sdate && Edate) {
+  if (
+    item.available_from > Sdate ||
+    item.available_to < Edate
+  ) continue;
+}
 
     results.push(item);
   }
-
   if (results.length > 0) {
     console.log("Final Results:", results);
   } else {
     console.log("No matching results found");
   }
+  localStorage.setItem("searchResults", JSON.stringify(results));
+  window.location.href = "listings.html";
 }
 
-function toAswan() {
-  var searchLocation = []
+function goToCity(cityName) {
+  var cityresults = [];
+
   for (var i = 0; i < alldata.length; i++) {
-    if (alldata[i].city.includes("Aswan")) {
-      searchLocation.push(alldata[i])
+    if (alldata[i].city.toLowerCase().includes(cityName.toLowerCase())) {
+      cityresults.push(alldata[i]);
     }
   }
-  localStorage.setItem("city", JSON.stringify(searchLocation.city));
-  // window.location.href = `listings.html`;
-  console.log(searchLocation);
-}
-function toAlexandria() {
-  var searchLocation = []
-  for (var i = 0; i < alldata.length; i++) {
-    if (alldata[i].city.includes("Alexandria")) {
-      searchLocation.push(alldata[i])
-    }
+
+  if (cityresults.length === 0) {
+    alert("No listings found");
+    return;
   }
-  console.log(searchLocation);
-  window.location.href = `listing.html?id=${searchLocation[0].city}`;
 
+  localStorage.setItem("searchcity", JSON.stringify(cityresults));
+  window.location.href = "listings.html";
 }
-function toCairo() {
-  var searchLocation = []
-  for (var i = 0; i < alldata.length; i++) {
-    if (alldata[i].city.includes("Cairo")) {
-      searchLocation.push(alldata[i])
-    }
-  }
-  console.log(searchLocation);
-  window.location.href = `listing.html?id=${searchLocation[0].city}`;
-
-}
-function toDahab() {
-  var searchLocation = []
-  for (var i = 0; i < alldata.length; i++) {
-    if (alldata[i].city.includes("Dahab")) {
-      searchLocation.push(alldata[i])
-    }
-  }
-  console.log(searchLocation);
-  window.location.href = `listing.html?id=${searchLocation[0].city}`;
-
-}
-function toElGouna() {
-  var searchLocation = []
-  for (var i = 0; i < alldata.length; i++) {
-    if (alldata[i].city.includes("El Gouna")) {
-      searchLocation.push(alldata[i])
-    }
-  }
-  console.log(searchLocation);
-  window.location.href = `listing.html?id=${searchLocation[0].city}`;
-
-}
-
-
 
