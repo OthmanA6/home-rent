@@ -22,7 +22,7 @@ xhr.send();
 
 function renderCards() {
     var parent = document.getElementById('parent');
-    JSON.parse(localStorage.getItem("searchcity")).forEach(apt => {
+    JSON.parse(localStorage.getItem("searchResults")).forEach(apt => {
         var card = document.createElement('div');
         card.classList.add("apartment-card");
 
