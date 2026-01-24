@@ -106,7 +106,7 @@ body {
   align-items: center;
 }
 .badge {
-  background-color: #fff2d8;
+  background-color: #ffe2a7;
   color: #ff7a00;
   padding: 10px;
   border-radius: 10px;
@@ -140,7 +140,7 @@ body {
 }
 hr{
   margin-block: 10px;
-  border: 1px solid rgb(238, 238, 238);
+  border: 1px solid #ffb82a79;
 }
 
 .apartment-owner-card {
@@ -189,7 +189,7 @@ hr{
   font-weight: bold;
 }
 .amin-obj i {
-  color: rgb(173, 173, 173);
+  color:#8d5e01;
 }
 
 .left-card {
@@ -199,8 +199,8 @@ hr{
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid #191919;
+  background-color: #ffe7b6;
+  border: 1px solid #ff7a00;
   /* box-shadow:  7px 10px 0px 0px #ff005131; */
   gap: 20px;
   /* transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s; */
@@ -219,7 +219,6 @@ hr{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
 }
 .lefr-card-content{
   display: flex;
