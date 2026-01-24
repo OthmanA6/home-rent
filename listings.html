@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apartments</title>
+    <link rel="stylesheet" href="./style/home.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fff2d8;
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .apartment-card {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 250px;
+            border: 1px solid #191919;
+        }
+
+        .apartment-card:hover {
+            transform: translateY(-3px);
+        }
+
+
+
+        .image-section {
+            width: 40%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-section {
+            width: 60%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .title {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 4px;
+        }
+
+        .location {
+            color: #717171;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .cancellation {
+            display: flex;
+            align-items: center;
+            color: #222;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .cancellation-icon {
+            margin-left: 8px;
+            font-size: 18px;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 22px;
+            color: #222;
+            cursor: pointer;
+        }
+
+        .view-btn {
+            color: white;
+            background-color: #ff7a00;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            height: 50vh;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="parent"></div>
+
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-col brand">
+                    <div class="logo">
+                        <span>Homelist</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor amet, consectetur sell adipis elit
+                        phase nibh ellentes
+                    </p>
+
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+
+                    <div class="social">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-x-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Home rent</li>
+                        <li>Car rental</li>
+                        <li>Flight finder</li>
+                        <li>Restaurant reservations</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Team</li>
+                        <li>Recent News</li>
+                        <li>Terms & Privacy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-envelope"></i> Osmanabdelrazik@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Aswan,Egypt</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hosts</h4>
+                    <p><i class="fa-solid fa-envelope"></i> List your property</p>
+                </div>
+
+            </div>
+        </footer>
+    <script src="js/listings.js"></script>
+</body>
+
+</html>
