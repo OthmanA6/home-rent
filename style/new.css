@@ -57,12 +57,9 @@
     transform: translateY(30px);
     transition-delay: .3s;
     transition: all .3s ease;
+    margin-left: 15px;
 }
 
-.description p {
-    color: #b0b0ba;
-    padding-top: 5px;
-}
 
 .description h4 {
     text-transform: uppercase;
@@ -74,6 +71,10 @@
 
 .inputc:hover + label {
     width: 500px;
+}
+.inputc:hover + label .description {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .inputc:checked + label .description {
