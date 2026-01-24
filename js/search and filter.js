@@ -10,7 +10,8 @@ xhr.onreadystatechange = function () {
 };
 xhr.send();
 
-function Results() {
+function Results(event) {
+  event.preventDefault();
   var location = document.getElementById("location").value.trim().toLowerCase();
   var guests = Number(document.getElementById("guests").value);
   var Sdate = document.getElementById("start-dates").value;
@@ -30,7 +31,8 @@ function Results() {
     }
 
     if (Sdate && Edate) {
-      if (item.available_from > Sdate || item.available_to < Edate) continue;
+      if (new Date(item.available_from) > new Date(Sdate) || new Date(item.available_to) < new Date(Edate))
+        continue;
     }
 
     results.push(item);
@@ -40,9 +42,13 @@ function Results() {
   } else {
     console.log("No matching results found");
   }
+  console.log("Checking item:", item.city);
+  console.log("Checking item:", item.max_guests);
+  console.log("Checking item:", item.available_from, item.available_to);
+
   localStorage.setItem("searchResults", JSON.stringify(results));
-  // renderCards(JSON.parse(localStorage.getItem("searchResults")));
   window.location.href = "listings.html";
+
 }
 
 function goToCity(cityName) {
@@ -60,55 +66,5 @@ function goToCity(cityName) {
   }
 
   localStorage.setItem("searchResults", JSON.stringify(cityresults));
-  // renderCards(JSON.parse(localStorage.getItem("searchcity")));
   window.location.href = "listings.html";
 }
-
-// function renderCards(FilterdData) {
-//   var parent = document.getElementById("parent");
-//   FilterdData.forEach((apt) => {
-//     var card = document.createElement("div");
-//     card.classList.add("apartment-card");
-
-//     card.onclick = function () {
-//       localStorage.setItem("apt_id", apt.apartment_id);
-//       window.location.href = `apartment.html`;
-//     };
-//     var imageSection = document.createElement("div");
-//     imageSection.classList.add("image-section");
-
-//     var img = document.createElement("img");
-//     img.src = apt.images[0];
-//     imageSection.appendChild(img);
-
-//     var infoSection = document.createElement("div");
-//     infoSection.classList.add("info-section");
-
-//     var title = document.createElement("h2");
-//     title.classList.add("title");
-//     title.innerHTML = apt.title;
-
-//     var location = document.createElement("div");
-//     location.classList.add("location");
-//     location.innerHTML = apt.address + ", " + apt.city;
-
-//     var details = document.createElement("div");
-//     details.classList.add("features");
-//     details.innerHTML =
-//       apt.max_guests +
-//       " guests · " +
-//       apt.bedrooms +
-//       " bedrooms · " +
-//       apt.bathrooms +
-//       " bathrooms";
-//     //    var btn = document.createElement('button');
-//     //     btn.classList.add("view-btn");
-//     //     btn.innerHTML = "View Details";
-//     //     btn.onclick = function() {
-//     //         window.location.href = `listing.html?id=${apt.id}`;
-//     //     };
-//     infoSection.append(title, location, details);
-//     card.append(imageSection, infoSection);
-//     parent.appendChild(card);
-//   });
-// }
