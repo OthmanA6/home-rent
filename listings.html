@@ -13,6 +13,15 @@
             padding: 0;
         }
 
+        .page-layout {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
         .nav {
             background-color: #ff7a00;
             height: 70px;
@@ -162,6 +171,40 @@
             height: 50vh;
             width: 50%;
         }
+
+        .filters {
+            background: #fff3dc;
+            border-radius: 12px;
+            padding: 16px;
+            height: fit-content;
+        }
+
+        .filters h3 {
+            margin-bottom: 16px;
+        }
+
+        .filters label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .filters input,
+        .filters select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+
+        .filters button {
+            width: 100%;
+            margin-top: 8px;
+            padding: 8px;
+            background: orange;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -169,13 +212,55 @@
     <div class="nav" id="nav">
         <div class="logo" onclick="window.location.href='home.html'">Homelist</div>
     </div>
-    <div id="parent"></div>
+    <div class="page-layout">
 
+        <aside class="filters">
+            <h3>Filters</h3>
+
+            <label>
+                City
+                <select onchange="filterByCategory()" id="filter-city">
+                    <option value="">All</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="Dahab">Dahab</option>
+                    <option value="El Gouna">El Gouna</option>
+                </select>
+            </label>
+
+            <label>
+                Guests
+                <select onchange="filterByGuests()" id="filter-guests">
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="5">5+</option>
+                    <option value="6">6+</option>
+                    <option value="7">7+</option>
+                    <option value="8">8</option>
+                </select>
+            </label>
+
+            <label>
+                Price (max)
+                <select onchange="sortByPrice()" id="filter-price">
+                    <option value="all">All Price</option>
+                    <option value="low">Low → High</option>
+                    <option value="high">High → Low</option>
+                </select>
+            </label>
+        </aside>
+
+        <main id="parent"></main>
+
+    </div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col brand">
-                <div class="logo" >
-                    <span >Homelist</span>
+                <div class="logo">
+                    <span>Homelist</span>
                 </div>
                 <p>
                     Lorem ipsum dolor amet, consectetur sell adipis elit

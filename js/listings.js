@@ -8,53 +8,77 @@ xhr.onreadystatechange = function () {
   }
 };
 xhr.send();
+var baseData = JSON.parse(localStorage.getItem("searchResults")) || alldata;
+var parent = document.getElementById("parent");
 
-renderCards();
+renderCards(baseData);
 
-function renderCards() {
-    var parent = document.getElementById('parent');
-    var storedData = localStorage.getItem("searchResults");
-    if (!storedData) {
-        console.log("No search results found in localStorage");
+function renderCards(data) {
+    parent.innerHTML = "";
+
+    if (data.length === 0) {
+        parent.innerHTML = "<h3>No results found</h3>";
         return;
     }
-    var results = JSON.parse(storedData);
-    parent.innerHTML = ""; 
 
-    results.forEach(apt => {
-        var card = document.createElement('div');
-        card.classList.add("apartment-card");
+    data.forEach(function (apt) {
+        var card = document.createElement("div");
+        card.className = "apartment-card";
 
         card.onclick = function () {
             localStorage.setItem("apt_id", apt.apartment_id);
-            window.location.href = `apartment.html`;
+            window.location.href = "apartment.html";
         };
 
-        var imageSection = document.createElement('div');
-        imageSection.classList.add("image-section");
-        var img = document.createElement('img');
-        img.src = apt.images[0];
-        imageSection.appendChild(img);
+        card.innerHTML = `
+            <div class="image-section">
+                <img src="${apt.images[0]}" alt="">
+            </div>
+            <div class="info-section">
+                <div class="title">${apt.title}</div>
+                <div class="location">${apt.address}, ${apt.city}</div>
+                <div class="features">
+                    ${apt.max_guests} guests · 
+                    ${apt.bedrooms} bedrooms · 
+                    ${apt.bathrooms} bathrooms
+                </div>
+            </div>
+        `;
 
-        var infoSection = document.createElement('div');
-        infoSection.classList.add("info-section");
-
-        var title = document.createElement('h2');
-        title.classList.add("title");
-        title.innerHTML = apt.title;
-
-        var location = document.createElement('div');
-        location.classList.add("location");
-        location.innerHTML = apt.address + ", " + apt.city;
-
-        var details = document.createElement('div');
-        details.classList.add("features");
-        details.innerHTML = `${apt.max_guests} guests · ${apt.bedrooms} bedrooms · ${apt.bathrooms} bathrooms`;
-
-        infoSection.append(title, location, details);
-        card.append(imageSection, infoSection);
         parent.appendChild(card);
     });
 }
+
+function applyAllFilters() {
+    var cityValue = document.getElementById("filter-city").value.toLowerCase();
+    var guestsValue = Number(document.getElementById("filter-guests").value);
+    var sortValue = document.getElementById("filter-price").value;
+    var filtered = alldata.filter(function (apt) {
+        var matchesCity = !cityValue || apt.city.toLowerCase() === cityValue;
+        var matchesGuests = !guestsValue || apt.max_guests >= guestsValue;
+        
+        return matchesCity && matchesGuests;
+    });
+    if (sortValue === "low") {
+        filtered.sort((a, b) => a.price_per_night - b.price_per_night);
+    } else if (sortValue === "high") {
+        filtered.sort((a, b) => b.price_per_night - a.price_per_night);
+    }
+    renderCards(filtered);
+}
+
+
+function filterByCategory() {
+    applyAllFilters();
+}
+
+function sortByPrice() {
+    applyAllFilters();
+}
+
+function filterByGuests() {
+    applyAllFilters();
+}
+
 
 
