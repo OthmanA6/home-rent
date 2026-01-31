@@ -113,3 +113,11 @@
 .sign-in:hover{
     cursor: pointer;
 }
+
+.sign-in-btn{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: 900;
+    background-color: orange;
+}

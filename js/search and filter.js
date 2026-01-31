@@ -54,7 +54,7 @@ function Results(event) {
 if(JSON.parse(localStorage.getItem("currentUserData"))!=null){
   document.getElementById("icon-bind").innerHTML=`<i class="fa-solid fa-user" onclick="OpenReservations()"></i>`
 }else{
-  document.getElementById("icon-bind").innerHTML=`<h1 onclick="OpenSignInPage()">Sign in</h1>`
+  document.getElementById("icon-bind").innerHTML=`<div class="sign-in-btn" onclick="OpenSignInPage()">Sign in</div>`
 }
 
 function OpenSignInPage(){
