@@ -51,6 +51,20 @@ function Results(event) {
 
 }
 
+if(JSON.parse(localStorage.getItem("currentUserData"))!=null){
+  document.getElementById("icon-bind").innerHTML=`<i class="fa-solid fa-user" onclick="OpenReservations()"></i>`
+}else{
+  document.getElementById("icon-bind").innerHTML=`<h1 onclick="OpenSignInPage()">Sign in</h1>`
+}
+
+function OpenSignInPage(){
+window.location.href="signin.html"
+}
+
+function OpenReservations(){
+  window.location.href="reservationPage.html"
+}
+
 function goToCity(cityName) {
   var cityresults = [];
 

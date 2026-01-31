@@ -1,4 +1,4 @@
-var usersList = JSON.parse(localStorage.getItem("usersList"));
+var usersList = JSON.parse(localStorage.getItem("usersList")) || [];
 var wrong = document.getElementById("wrong")
 var userData = [];
 function CheckUser() {

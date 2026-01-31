@@ -102,3 +102,14 @@
     background-image: url('./Aswan.jpg');
     background-position: center;
 }
+
+.sign-in{
+    padding: 10px 50px;
+    right: 0;
+    color: white;
+    position: absolute;
+    font-size: 32px;
+}
+.sign-in:hover{
+    cursor: pointer;
+}

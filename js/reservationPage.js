@@ -11,21 +11,22 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 function renderCards() {
-  reservedApartments = JSON.parse(localStorage.getItem("reservedApartment"))||[];
-  if(reservedApartments.length==0){
-    var errorContainer = document.getElementById("not-found-container")
-      var error = document.createElement("h1")
-      error.innerHTML="There is no reservations!"
-      error.style.fontSize="48px"
-      error.style.textAlign="center"
-      error.style.order="1"
-      errorContainer.appendChild(error)
+  reservedApartments =
+    JSON.parse(localStorage.getItem("reservedApartment")) || [];
+  if (reservedApartments.length == 0) {
+    var errorContainer = document.getElementById("not-found-container");
+    var error = document.createElement("h1");
+    error.innerHTML = "There is no reservations!";
+    error.style.fontSize = "48px";
+    error.style.textAlign = "center";
+    error.style.order = "1";
+    errorContainer.appendChild(error);
   }
   alldata.forEach((apt) => {
     if (reservedApartments.includes(apt.apartment_id)) {
       render(apt);
     }
-});
+  });
   var reservedApartments =
     JSON.parse(localStorage.getItem("reservedApartment")) || [];
   var nav = document.getElementById("nav");
@@ -42,12 +43,12 @@ function renderCards() {
 }
 
 function render(apt) {
-    var parent = document.getElementById("parent");
-    var card = document.createElement("div");
-    card.addEventListener("click",()=>{
-      localStorage.setItem("apt_id",apt.apartment_id)
+  var parent = document.getElementById("parent");
+  var card = document.createElement("div");
+  card.addEventListener("click", () => {
+    localStorage.setItem("apt_id", apt.apartment_id);
     window.location.href = `apartment.html`;
-  })
+  });
   card.classList.add("apartment-card");
   var imageSection = document.createElement("div");
   imageSection.classList.add("image-section");

@@ -195,16 +195,22 @@ function setContent() {
   ReserveButton.innerHTML = "Reserve";
   var reservedApartments =
     JSON.parse(localStorage.getItem("reservedApartment")) || [];
+    
   ReserveButton.addEventListener("click", () => {
-    if (!reservedApartments.includes(apartment.apartment_id)) {
-      reservedApartments.push(apartment.apartment_id);
-      alert("Reserved Sucsessfully !")
-      localStorage.setItem(
-        "reservedApartment",
-        JSON.stringify(reservedApartments),
-      );
-    } else {
-      alert("Reserved Before !");
+    if(JSON.parse(localStorage.getItem("currentUserData"))==null){
+      alert("Please Sign in first")
+    }
+    else{
+      if (!reservedApartments.includes(apartment.apartment_id)) {
+        reservedApartments.push(apartment.apartment_id);
+        alert("Reserved Sucsessfully !")
+        localStorage.setItem(
+          "reservedApartment",
+          JSON.stringify(reservedApartments),
+        );
+      } else {
+        alert("Reserved Before !");
+      }
     }
   });
   leftCard.append(priceRate, hr4, amenityHeader,aminities, hr5, rules, ReserveButton);
