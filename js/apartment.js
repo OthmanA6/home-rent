@@ -199,6 +199,7 @@ function setContent() {
   ReserveButton.addEventListener("click", () => {
     if(JSON.parse(localStorage.getItem("currentUserData"))==null){
       alert("Please Sign in first")
+      window.location.href("signin.html")
     }
     else{
       if (!reservedApartments.includes(apartment.apartment_id)) {
